@@ -1,12 +1,15 @@
 var fs = require('fs');
 var infile = "index.html";
+var outfile = "outindex"
 var buf = new Buffer(256);
 var st  = new String();
 
-fs.readFileSync(infile,buf);
+buf = fs.readFileSync(infile);
 st = buf.toString();
+console.log(st);
+//fs.writeFileSync(outfile, st);
 
-ver express = require('express');
+var express = require('express');
 
 var app = express.createServer(express.logger());
 
